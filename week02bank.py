@@ -7,6 +7,8 @@ amount1 = int(input("first amount in cents: "))
 
 amount2 = int(input("Second amount in cents: "))
 
-#variable answer
+#variable answer is both inputs sum/100
 answer = (amount1+amount2)/100
+
+#print the answer
 print(f"The sum: €{answer}")
