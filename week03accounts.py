@@ -15,6 +15,5 @@ strlength = len(str)
 #Hide all but last 4 digits in string
 masked = strlength - 4
 
-
 str = str[masked:]
 print ("*" * masked + str)
