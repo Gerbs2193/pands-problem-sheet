@@ -1,6 +1,3 @@
-numberToGuess = 30
-guess = int(input("Please guess the number:"))
-while guess != numberToGuess:
- print ("Wrong")
-guess = int(input("Please guess again:"))
-print ("Well done! Yes the number was ", numberToGuess)
+credit_card_number = input("Enter your credit card number: ")
+masked_cc_number = "**** **** **** " + credit_card_number[-4:]
+print("Masked credit card number:", masked_cc_number)

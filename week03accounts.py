@@ -2,18 +2,11 @@
 #week3accounts.py
 #masking numbers
 
+#code will prompt user to input their CC and store it in 'credit_card_number' variable
+credit_card_number = input("Enter your credit card number: ")
 
-#converts string input to an integer
-amount = int(input("Enter Bank Account Number ending (6789)"))
+# string masked_cc_number by concatenating four (*) followed by space and the last 4 digits of cc number using string slicing
+masked_cc_number = "**** **** **** " + credit_card_number[-4:]
 
-# string is static as last 4 digits remind user to input their card
-str = "123456789"
+print("Masked credit card number:", masked_cc_number)
 
-#returns number of chars in string
-strlength = len(str)
-
-#Hide all but last 4 digits in string
-masked = strlength - 4
-
-str = str[masked:]
-print ("*" * masked + str)
