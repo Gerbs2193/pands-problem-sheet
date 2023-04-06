@@ -32,3 +32,4 @@ plt.legend()
 
 #we disp;lay the plot
 plt.show()
+

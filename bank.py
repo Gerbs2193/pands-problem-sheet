@@ -12,3 +12,4 @@ answer = (amount1+amount2)/100
 
 #print the answer
 print(f"The sum: €{answer}")
+

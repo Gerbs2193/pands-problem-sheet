@@ -40,3 +40,5 @@ while num <= 0:
 print(collatz(num))
 
     
+
+    
