@@ -1,14 +1,14 @@
 #Author: Gerad Ball
-#program that creates a function that uses Newton's formula to approximate the square rot of a number
+#program that creates a function that uses Newton's formula to approximate the square root of a number
 #week06squareroot.py
 
 # defines a function 'my_sqrt' that takes argument of 'n'
 def my_sqrt(n):
 
-    #variable approx = half of 'n'. Newton approach to approximating a number is the square root of a number is always less than or equal to half said number. Starting point approx variable
+    #variable approx = half of 'n'. Babylonian approach to approximating a number is the square root of a number is always less than or equal to half said number. Starting point approx variable
     approx = n/2
 
-    # calcuates new approximation of n. Average of approx and n/approx is now closer to to actual square root. This approximation is .ocated in the variable 'closer'
+    # calcuates new approximation of n. Average of approx and n/approx is now closer to to actual square root. This approximation is located in the variable 'closer'
     closer = (approx +n/approx)/2
 
     # while loop. Continues for as long as approximation closer is different from previous result
@@ -28,5 +28,5 @@ def my_sqrt(n):
         #exits loop and returns final square root calculation/approximation
         return approx
         
-n=int(input("enter number: "))
-print ("Square Root of Number: ", my_sqrt(n))
+n=int(input("Enter number: "))
+print ("Approximate square Root of Number: ", my_sqrt(n))
