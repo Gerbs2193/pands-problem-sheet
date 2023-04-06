@@ -29,5 +29,3 @@ print(f"The letter '{letter}' appears {freq} times in the file.")
       return text.count(letter)
 print(letterfrequency('testing.txt, 'e'))
 '''
-
-

@@ -297,8 +297,6 @@ So, overall this program calculates an approximation of the user input using the
 
 
 
-
-
  
 
 
