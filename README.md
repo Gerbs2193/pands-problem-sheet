@@ -1,6 +1,20 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<style>
+  h1, h2 {
+    color: blue;
+  }
+</style>
+
+# Table Of Contents
+## Tasks
+## helloworld1.py
+## bank2.py
+## accounts3.py
+## collatz4.py
+## weekday5.py
+## squareroot6.py
+## leterfrequency7.py
+## plottask8.py
+## Conclusion
 
 # pands-problem-sheet
 # Problems 2023
