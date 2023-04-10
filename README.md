@@ -11,7 +11,7 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 
 ## Table Of Contents
 *[weekly tasks](#weekly-tasks)
-*[helloworld1.py](#helloworld)
+*[helloworld1.py](#helloworld1.py)
 *[bank2.py](#bank)
 *[accounts3.py](#accounts)
 *[collatz4.py](#collatz)
@@ -23,7 +23,7 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 
 ## Weekly tasks <a name="weeklytasks"></a>
 ======
-## helloworld <a name="helloworld1py"></a>
+## helloworld1.py <a name="helloworld1.py"></a>
 
 ## Task
 
