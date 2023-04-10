@@ -10,7 +10,7 @@ This repository is all about the weekly problem set issued by Andrew during the 
 Here, I will go through and explain how I solved each weekly problem sheet task, the resources I used that were essential to both my understanding of the problem being asked and how I implemented the solutions using said resources. I had next to zero experience using any programming language and, as such, i relied heavily on the extra reading Andrew supplied through the module page and the almost limitless resources online. 
 
 ## Table Of Contents
-*[weekly tasks](#weekly-tasks)
+*[Weekly-tasks](#Weekly-tasks)
 *[helloworld1.py](#helloworld1.py)
 *[bank2.py](#bank2.py)
 *[accounts3.py](#accounts3.py)
@@ -21,7 +21,7 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 *[plottask8.py](#plottask8.py)
 *[conclusion](#Conclusion)
 
-## Weekly tasks <a name="weeklytasks"></a>
+## Weekly-tasks <a name="Weekly-tasks"></a>
 ======
 ## helloworld1.py <a name="helloworld1.py"></a>
 
