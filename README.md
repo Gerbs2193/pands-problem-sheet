@@ -10,20 +10,20 @@ This repository is all about the weekly problem set issued by Andrew during the 
 Here, I will go through and explain how I solved each weekly problem sheet task, the resources I used that were essential to both my understanding of the problem being asked and how I implemented the solutions using said resources. I had next to zero experience using any programming language and, as such, i relied heavily on the extra reading Andrew supplied through the module page and the almost limitless resources online. 
 
 ## Table Of Contents
-*[Weekly tasks](#weekly-tasks)
-*[Helloworld1.py](#helloworld)
-*[Bank2.py](#bank)
-*[Accounts3.py](#accounts)
-*[Collatz4.py](#collatz)
-*[Weekday5.py](#weekday)
-*[Squareroot6.py](#squareroot)
-*[Leterfrequency7.py](#letterfrequency)
-*[Plottask8.py](#plottask)
-*[Conclusion](#conclusion)
+*[weekly tasks](#weekly-tasks)
+*[helloworld1.py](#helloworld)
+*[bank2.py](#bank)
+*[accounts3.py](#accounts)
+*[collatz4.py](#collatz)
+*[weekday5.py](#weekday)
+*[squareroot6.py](#squareroot)
+*[leterfrequency7.py](#letterfrequency)
+*[plottask8.py](#plottask)
+*[conclusion](#conclusion)
 
 ## Weekly tasks <a name="weeklytasks"></a>
 ======
-## Helloworld <a name="helloworld1py"></a>
+## helloworld <a name="helloworld1py"></a>
 
 ## Task
 
