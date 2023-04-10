@@ -10,19 +10,20 @@ This repository is all about the weekly problem set issued by Andrew during the 
 Here, I will go through and explain how I solved each weekly problem sheet task, the resources I used that were essential to both my understanding of the problem being asked and how I implemented the solutions using said resources. I had next to zero experience using any programming language and, as such, i relied heavily on the extra reading Andrew supplied through the module page and the almost limitless resources online. 
 
 ## Table Of Contents
-*[weekly tasks](#weekly-tasks)
-*[helloworld.py](#helloworld.py)
-*[bank.py](#bank.py)
-*[accounts.py](#accounts.py)
-*[collatz.py](#collatz.py)
-*[weekday.py](#weekday.py)
-*[squareroot.py](#squareroot.py)
-*[leterfrequency.py](#letterfrequency.py)
-*[plottask.py](#plottask.py)
+*[Weekly tasks](#weekly-tasks)
+*[Helloworld1.py](#helloworld)
+*[Bank2.py](#bank)
+*[Accounts3.py](#accounts)
+*[Collatz4.py](#collatz)
+*[Weekday5.py](#weekday)
+*[Squareroot6.py](#squareroot)
+*[Leterfrequency7.py](#letterfrequency)
+*[Plottask8.py](#plottask)
+*[Conclusion](#conclusion)
 
-## Weekly tasks
+## Weekly tasks <a name="weeklytasks"></a>
 ======
-## helloworld.py
+## Helloworld <a name="helloworld1py"></a>
 
 ## Task
 
@@ -54,7 +55,7 @@ Embarrassing to look back on indeed.
 ----
 
 
-## bank.py
+## Bank <a name="bank2py"></a>
 
 ## Task
 
@@ -100,7 +101,7 @@ So overall, this program prompts the user to enter two amounts in cents, adds th
 
 ----
 
-## accounts.py
+## accounts <a name="accounts3py"></a>
 
 ## Task
 
@@ -140,7 +141,7 @@ So, overall, this code - using concatenation, masking and slicing - disguises th
 
 ----
 
-## collatz.py
+## collatz <a name="collatz4py"></a>
 
 ## Task
 
@@ -197,7 +198,7 @@ So, overall this code performs the collatz using the above found formula, output
 
 ----
 
-## weekday.py
+## weekday <a name="weekday5py"></a>
 
 ## Task
 
@@ -247,7 +248,7 @@ So, overall this code determines whether it is a weekday or weekend by importing
 
 ----
 
-## squareroot.py
+## squareroot <a name="aquareroot6py"></a>
 
 ## Task
 
@@ -309,8 +310,7 @@ So, overall this program calculates an approximation of the user input using the
 
 ----
 
-## wordfrequency.py
-
+## letterfrequency <a name="letterfrequency7py"></a>
 ## Task
 
 Write a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line. 
@@ -380,8 +380,7 @@ python .\letterfrequency.py testing.txt e
 
 ----
 
-## plottask.py
-
+## plottask <a name="plottask8py"></a>
 ## Task
 
 Create a histogram of a normal distribution of 1000 values with a mean of 5 and standard deviation of 2, 
@@ -448,6 +447,6 @@ python .\plottask.py
 ----
 
 
-## Conclusion
+## Conclusion <a name="conclusion"></a>
 
 Firstly, I want to thank the very fortunate souls that have reached this far in and have had the great 'privilege' of reading my rather lengthy readme. I took a lot from  these tasks. To any programmer worth any salt at all, I'm sure the above tasks are mere child's play - if even that. For me, however - I struggled immensely, struggled sensationally and then to change things up - struggled some more. I panicked when i couldn't get my collatz to collatz right away; when I didn't understand how to make dynamic strings when masking CC numbers; when I had no idea what a command line argument was, never mind implement two. However, I also got a great sense of satisfaction when i - in the end - could resolve those problems through exhaustive research, discussions with my fellow classmates and examples of similar code implementations online. I am still a beginner - perhaps even that is too esteemed a term. What the above tasks have done for me is introduce me to the world of scripting and python. I've grown a fair bit from being intimidated as to how to print Hello world! to where I am now. So, I may be very low on the development ladder - but the weekly pands-problem-sheet assignments have helped me improve and learn to think logically.  
