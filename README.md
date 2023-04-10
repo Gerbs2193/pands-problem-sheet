@@ -1,9 +1,3 @@
-<style>
-  h1, h2 {
-    color: blue;
-  }
-</style>
-
 # pands-problem-sheet
 # Problems 2023
 
