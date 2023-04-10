@@ -4,6 +4,9 @@
   }
 </style>
 
+# pands-problem-sheet
+# Problems 2023
+
 # Table Of Contents
 ## Tasks
 ## helloworld1.py
@@ -15,9 +18,6 @@
 ## leterfrequency7.py
 ## plottask8.py
 ## Conclusion
-
-# pands-problem-sheet
-# Problems 2023
 
 This repository is all about the weekly problem set issued by Andrew during the Programming and Scripting module in the Higher Diploma in Data Analytics course in ATU.\
 
