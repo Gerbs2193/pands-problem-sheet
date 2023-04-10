@@ -14,12 +14,12 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 *[helloworld1.py](#helloworld1.py)
 *[bank2.py](#bank2.py)
 *[accounts3.py](#accounts3.py)
-*[collatz4.py](#collatz4,py)
+*[collatz4.py](#collatz4.py)
 *[weekday5.py](#weekday5.py)
 *[squareroot6.py](#squareroot6.py)
 *[leterfrequency7.py](#letterfrequency7.py)
 *[plottask8.py](#plottask8.py)
-*[conclusion](#Conclusion)
+*[Conclusion](#conclusion)
 
 ## Tasks <a name="Tasks"></a>
 ======
@@ -248,7 +248,7 @@ So, overall this code determines whether it is a weekday or weekend by importing
 
 ----
 
-## squareroot6.py <a name="aquareroot6.py"></a>
+## squareroot6.py <a name="squareroot6.py"></a>
 
 ## Task
 
@@ -447,6 +447,6 @@ python .\plottask.py
 ----
 
 
-## Conclusion <a name="Conclusion"></a>
+## Conclusion <a name="conclusion"></a>
 
 Firstly, I want to thank the very fortunate souls that have reached this far in and have had the great 'privilege' of reading my rather lengthy readme. I took a lot from  these tasks. To any programmer worth any salt at all, I'm sure the above tasks are mere child's play - if even that. For me, however - I struggled immensely, struggled sensationally and then to change things up - struggled some more. I panicked when i couldn't get my collatz to collatz right away; when I didn't understand how to make dynamic strings when masking CC numbers; when I had no idea what a command line argument was, never mind implement two. However, I also got a great sense of satisfaction when i - in the end - could resolve those problems through exhaustive research, discussions with my fellow classmates and examples of similar code implementations online. I am still a beginner - perhaps even that is too esteemed a term. What the above tasks have done for me is introduce me to the world of scripting and python. I've grown a fair bit from being intimidated as to how to print Hello world! to where I am now. So, I may be very low on the development ladder - but the weekly pands-problem-sheet assignments have helped me improve and learn to think logically.  
