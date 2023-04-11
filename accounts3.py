@@ -2,11 +2,8 @@
 #week3accounts.py
 #masking numbers
 
-#code will prompt user to input their CC and store it in 'credit_card_number' variable
-credit_card_number = input("Enter your credit card number: ")
 
-# string masked_cc_number by concatenating four (x) followed by space and the last 4 digits of cc number using string slicing
-masked_cc_number = " xxx xxx " + credit_card_number[-4:]
-
-print("Masked credit card number:", masked_cc_number)
+bank_account_number = input("Enter your Bank Account Number: ") #code will prompt user to input their account number and store it in 'bank_account_number' variable
+masked_ac_number = " xxx xxx " + bank_account_number[-4:] # string masked_ac_number by concatenating (x) followed by space and the last 4 digits of ac number using string slicing
+print("Masked bank account number:", masked_ac_number)
 
