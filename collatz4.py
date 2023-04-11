@@ -2,32 +2,20 @@
 #Week04collatz.py
 #This programme calculates the collatz of positive integer numbers and prompts the user that they inputed a negative integer number if they have done so and that they should input a positive instead. 
 
-# defines a function called called with the argument of 'num'
-def collatz(num):
-
-  #empty list called sequence that stores the collatz numbers. Initially i simply outputting the collatz in typical vertical python orientation and only weeks later did i realise that Andrew's collatz example outputted them in a list. Oops
-    sequence = []
-#while loop that goes on while num is not equal to 1
+def collatz(num): # define fuction collatz with num that we want from it
+    sequence = []   # initialize an empty list to store the Collatz sequence
     while num != 1:
-#Adds current num to sequence list
-        sequence.append(num)
-# if num is even
-        if num % 2 == 0:
-#divides num by 2
+        sequence.append(num)   # add the current number to the sequence list
+        if num % 2 == 0:   # if the number is even, divide it by 2
             num //= 2
-#when num is odd
-        else:
-#x num by 3 and add 1 and assign to new num value
-            num = num * 3 + 1
-    sequence.append(num)
-#returns final collatz
-    return sequence
-#User prompted to enter positive integer number
-num = int(input("Enter a positive integer number: "))
-#while loop that goes on as long as num is negative aka <0
-while num <= 0:
-    print("Detected negative integer. please enter a positive integer number: ")
+    else:
+            num = num * 3 + 1   # if the number is odd, multiply by 3 and add 1
+            sequence.append(num)   # add the final 1 to the sequence list
+    return sequence   # return the Collatz sequence as a list
+num = int(input("Enter a positive integer number: "))   # prompt user for input
+while num <= 0:   # loop until user enters a positive integer
+    print("Invalid input. Please enter a positive integer.")
     num = int(input("Enter a positive integer number: "))
-print(collatz(num))
+print(collatz(num))   # print the Collatz sequence for the user-provided number
 
     
