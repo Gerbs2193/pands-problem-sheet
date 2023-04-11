@@ -15,6 +15,7 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 *[leterfrequency7.py](#letterfrequency7.py)
 *[plottask8.py](#plottask8.py)
 *[Conclusion](#conclusion)
+*[READMESources](#readmeSources)
 
 ## Tasks
 ======
@@ -440,6 +441,14 @@ So, overall this program generates a histogram of the aforementioned requirement
 python .\plottask.py
 ```
 ----
+
+## READMESources <a name="readmeSources"></a>
+
+1. [Markdown Cheat sheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md) - Used to get all the necessary Markdown correct. Essential for headings, code snippets using ```sh, hyperlink external websites, table of content. 
+
+2. [Markdown](https://www.markdownguide.org/getting-started) - Same as before
+
+3. [README - all about how to write one](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/) - Important for knowing what to include like headings, table of contents and conclusion etc. 
 
 
 ## Conclusion <a name="conclusion"></a>
