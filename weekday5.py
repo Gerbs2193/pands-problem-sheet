@@ -15,7 +15,6 @@ if weekno < 5:
 # weekno>5=Saturday, Sunday
 
 #6,7 aka sat + sun 
-
 else: 
  print ("Weekend, yessssss!")
 
