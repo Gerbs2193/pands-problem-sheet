@@ -2,7 +2,7 @@
 
 This repository is all about the weekly problem set issued by Andrew during the Programming and Scripting module in the Higher Diploma in Data Analytics course in ATU.\
 
-Here, I will go through and explain how I solved each weekly problem sheet task, the resources I used that were essential to both my understanding of the problem being asked and how I implemented the solutions using said resources. I had next to zero experience using any programming language and, as such, i relied heavily on the extra reading Andrew supplied through the module page and the almost limitless resources online. 
+Here, I will go through and explain how I solved each weekly problem sheet task, the resources I used that were essential to both my understanding of the problem being asked and how I implemented the solutions using said resources. I will be specific as to how I solved each challenge giving references to all my inspiration - be it direct or indirect.  I will also go into how each solution can be run in practical ways to use them in the real word to solve every-day problems. I had next to zero experience using any programming language and, as such, I relied heavily on the extra reading Andrew supplied through the module page and the almost limitless resources online. 
 
 ## Table Of Contents
 - [helloworld1.py](#helloworld1.py)
@@ -27,7 +27,7 @@ Write a program that displays Hello World! when  its run. This is a simple progr
 ## Usage
 To run, navigate to the 'helloworld.py' file and enter the following command in the terminal:
 ```sh
-python .\helloworld.py
+python .\helloworld1.py
 ```
 ## code
 print("Hello World!)
@@ -57,27 +57,44 @@ Embarrassing to look back on indeed.
 Write a program  that prompts the user to read in two money amounts in cents. Add them and print the result in euro form
 
 ## Usage
-To run, navigate to the 'bank.py' file and enter the following command in the terminal:
+To run, navigate to the 'bank2.py' file and enter the following command in the terminal:
 ```sh
-python .\bank.py. 
+python .\bank2.py. 
 ```
 Input 2 separate amounts in cents when instructed and await the result
 
+## What is it and how can it be used
+This code can be used in a wide range of scenarios where you need to add two monetary amounts and display the result in a user-friendly way. For one, it could be used in a point-of-sale system where the user needs to input the amounts of items they are purchasing and the system needs to calculate the total cost.
+
+Another use case could be for financial applications - like budgeting tools or expense trackers - where users need to input their expenses and income in cents and see their net balance displayed in Euros or any other currency.
+
+Overall, this code demonstrates a basic but essential programming concept that is used in many real-world applications. It shows how simple arithmetic operations, combined with input/output functions, can be used to solve practical problems and provide users with valuable information. Many practical use-cases of said code exist as the code is simple to write and can be used by companies, private citizens and budding coders alike. 
+
 ## Code + Explanation
 ```sh
-amount1 = int(input("Please enter first amount in cents"))
-amount2 = int(input("Please enter second amount in cents))
-answer = (amount1 + amount2)/100
-print(f"The sum: €{answer}")
+amount1 = int(input("first amount in cents: "))                   
+amount2 = int(input("Second amount in cents: "))                  
+sum_in_cents = amount1 + amount2                                  
+sum_in_euros = sum_in_cents // 100                                
+cents = sum_in_cents % 100                                        
+output_string = "The sum: €{}.{:02d}".format(sum_in_euros, cents) 
+print(output_string)
 ```
 
-- The first line prompts the user to enter the first amount in cents using the input() function. I used int(input) as I needed to  convert the user's input (A string) into an integer, which is then assigned to the amount1 variable. If I had just used input() and tried to add both variables amounts together using this method id get an error as I cant perform a mathematical operation between a string and an integer. int(input) solves this by converting the user's input to an integer and allowing for arithmetic calculations. amount1 is the variable
+- The first line prompts the user to enter the first amount in cents using the input() function. I used int(input) as I needed to  convert the user's input (A string) into an integer, which is then assigned to the amount1 variable. If I had just used input() and tried to add both variable amounts together using this method id get an error as I cant perform a mathematical operation between a string and an integer. int(input) solves this by converting the user's input to an integer and allowing for arithmetic calculations. amount1 is the variable
 
 - The second line same logic as first.
 
-- Third line adds the two variable amounts together and divides the result by 100 to get the accurate decimal euro total. Then the result of the calculation is assigned to the answer variable.
+- The third line I calculate the sum of the input amounts in cents. I use a variable called sum_in_cents to store the sum of the inputs. 
 
-- Final line I used f-string to print the value of answer in the format "€{answer}". At the point in time of doing this task, I didn't know why f-string was used and initially used: print("The sum: €" + str(answer)) as that is what I found people doing on Stack Overflow for various problems. Alas,I've been hearing using an f-string is considered more readable and convenient, as it allows you to easily include variables and expressions in your strings. I still find myself inconsistent with how I code. 
+- I then create a new variable called sum_in_euros that is created by performing the integer division of sum_in_cents by 100 using the double slash operator // in python. sum_in_cents contains the total sum in cents, and sum_in_euros contains the total sum in Euros. There are 100 cents in one Euro so dividing the total sum in cents by 100 using integer division gives the total sum in Euros without any decimal places. Initially, I had used floats to calculate this using / - however, upon reading Andrew's feedback I promptly changed to using integer arithmetic instead. I will detail my resources in depth and how I achieved this in the resources title below. 
+
+- I then utilise the code  'cents = sum_in_cents % 100' to calculate the number of cents that are left over after converting the sum of amount1 and amount2 to Euros.The modulo operator - % - returns the remainder of the integer division of sum_in_cents by 100. This removes any full Euros from the total and leaves only the remaining cents, which is vital for the task. 
+
+- Lastly, The string "The sum: €{}.{:02d}" is a format string that contains two placeholders as seen by the curly brackets. The first placeholder {} is replaced with the value of sum_in_euros, which is the integer part of the sum of amount1 and amount2 in Euros. The second placeholder {:02d} is replaced with the value of cents, which is the remainder of the sum of amount1 and amount2 after converting to Euros.
+The :02d part of the second placeholder is vital as it specifies that the value of cents should be displayed with two decimal places. The d indicates that the value should be treated as an integer.For example, if sum_in_euros is 1 and cents is 2 then the output would be "The sum: €1.02". The 1 is the value of sum_in_euros and the 02 is the value of cents displayed with two decimal places. Initially, I didn't format my attempt but did so upon reading Andrew's feedback. 
+
+
 
 ## Output
 Program prints amount in euro decimal depending on user input. Example, user inputs 90 and 50 the output would be 
@@ -88,11 +105,13 @@ Program prints amount in euro decimal depending on user input. Example, user inp
 1. [Python Input() Function](https://www.w3schools.com/python/ref_func_input.asp)
 2. [Python int() Function](https://www.w3schools.com/python/ref_func_int.asp)
 3. [Python Division Operator](https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp)
-4. [Python f-Strings](https://realpython.com/python-f-strings/)
+4. [Python string operations](https://docs.python.org/3/library/string.html#format-specification-mini-language)
+5. [Python w3schools more formatting](https://www.w3schools.com/python/ref_string_format.asp)
+6. [Python // arithmetic and modulus](http://anh.cs.luc.edu/handsonPythonTutorial/integer.html)
 
-I used all the above resources, specifically the w3schools int()function to do this task. I also used Stack Overflow just to see examples of people using f-strings. 
+I used all the above resources. At the beginning I used the w3schools resources on int()function to do this task. I couldn't find very similar code online - however, I found the following essential for learning how to get the python format string to construct the output message: https://www.w3schools.com/python/ref_string_format.asp. I used the w3schools page to learn how to code the "The sum: €{}.{:02d}" format line and properly format my output. I also used: http://anh.cs.luc.edu/handsonPythonTutorial/integer.html to educate myself on how to change from using floats to using integer arithmetic (//) and using modulus (%) which was key as it allowed me to display the output in both euro and cents form. 
 
-So overall, this program prompts the user to enter two amounts in cents, adds them together, converts the result to euros, and prints the result in the format "€{answer}".
+So overall, this program prompts the user to enter two amounts in cents, adds them together, converts the result to euros, and prints the result in the format in euros and cents in decimal. 
 
 ----
 
@@ -104,33 +123,45 @@ Write a program that reads in a 10 character account number and outputs the acco
 
 ## Usage
 
-To run, navigate to 'accounts.py' file and enter the following command in the terminal:
+To run, navigate to 'accounts3.py' file and enter the following command in the terminal:
 ```sh
  python .\accounts.py
  ```
+ 
+## What is it and how can it be used
+This code is used to mask or hide sensitive information like a private account number. By prompting the user to input their account number and storing it in the variable 'account_number', the code then masks the account number by replacing the first digits with "x" and displaying only the last 4 digits of the account number - thus achieving privacy. 
+
+This is useful in scenarios where the user's account number needs to be displayed or used, but the full account number cannot be shown due to privacy concerns or security reasons. For example, when displaying account information on a receipt or invoice, or when verifying a user's identity through their account number. This code allows one to enter their full account number without displaying it on screen with masking. 
+
+This code can be easily integrated into larger software systems or applications that require masking of sensitive data, providing an additional layer of security and privacy for users. For instance; Compliance: In certain industries like finance or healthcare, it may be required by law or industry regulations to mask or encrypt personal information like including account numbers. This code can help ensure compliance with these regulations. Or, in banking, this code is already widespread as it hides sensitive information. 
+
+So, this code has many use cases as masking sensitive numbers is something millions of users interact with on a daily basis, without knowing how. 
+
  ## Code + Explanation
  ```sh
-credit_card_number = input("Enter your credit card number: ")
-masked_cc_number = " xxx xxx " + credit_card_number[-4:]
-print("Masked credit card number:", masked_cc_number)
+account_number = input("Enter your account number: ")
+masked_ac_number = " xxx xxx " + account_number[-4:]
+print("Masked Account number:", masked_ac_number)
 ```
 
-- First line of code requests the user's credit card number as  input and stores it as a string in the variable I called credit_card_number.
+- First line of code requests the user's account number as input and stores it as a string in the variable I called account_number.
 
-- Second line of code took many revisions over many weeks but eventually, from research online, combined concatenating (what I understand to be combining 2 or more strings together into 1 string) and slicing all but the last 4 digits using [-4:]. The "xxx xxx" is a string that will mask the first 6 digits of a 10 digit number. The [-4:] part of the credit_card_number string refers to a slice of the string that starts at the fourth last character and continues to the end of the string. This slice extracts the last four digits of the credit card number and concatenates it with the masked string to produce the masked credit card number. Also, you can input any length of number you wish - doesn't have to be 10 digits - and you will always get the masking of the final 4 digits. However, with this current method, the masking string only masks 6 digits. I initially had "xxxx xxxx xxxx" to simulate the usual length of a 16 standard CC, by masking the first 12 digits. From the bunker deep rabbit hole I went down researching the above solutions, I found I could also dynamically use the masking string x to cover every user inputted digit minus the last 4. I didn't 100 percent understand all of it at that time so I just stuck with the above which I did. 
+- Second line of code took many revisions over many weeks but eventually, from research online, combined concatenating (what I understand to be combining 2 or more strings together into 1 string) and slicing all but the last 4 digits using [-4:]. The "xxx xxx" is a string that will mask the first 6 digits of a 10 digit number. The [-4:] part of the credit_card_number string refers to a slice of the string that starts at the fourth last character and continues to the end of the string. This slice extracts the last four digits of the account number and concatenates it with the masked string to produce the masked account number. Also, you can input any length of number you wish - doesn't have to be 10 digits - and you will always get the masking of all but the final 4 digits. However, with this current method, the masking string only masks 6 digits. I initially had "xxxx xxxx xxxx" by masking the first 12 digits. From the bunker deep rabbit hole I went down researching the above solutions, I found I could also dynamically use the masking string x to cover every user inputted digit minus the last 4. I didn't 100 percent understand all of it at that time so I just stuck with the above which masks all but the last 4.  
 
-- Third line In my code we simply print out the final masked CC number. We have a string called "Masked credit card number:" and a variable called masked_cc_number that has the masked credit card number. We then print the two as a single, displaying our desired masked CC number
+- Third line In my code we simply print out the final masked ac number. We have a string called "Masked Account number:" and a variable called masked_cc_number that has the account number. We then print the two as a single, displaying our desired masked ac number
 
 ## Output
-Program masks CC number. "Enter your credit card number" - example = 012 347 1234
-Masked credit card number:  xxx xxx 1234
+Program masks ac number. "Enter your account number" - example = 012 347 1234
+Masked account number:  xxx xxx 1234
 
 ## Resources
 1. [Python String Concatenation](https://www.geeksforgeeks.org/python-string-concatenation/)
 2. [Python Slice Notation - GeeksforGeeks](https://www.geeksforgeeks.org/string-slicing-in-python/)
 3. [masking last 4 digits of CC](https://stackoverflow.com/questions/62304515/how-to-mask-credit-card-number-except-the-last-four-digits-using-regex)
+4. [masking example i initially used](https://www.solveforum.com/forums/threads/solved-is-there-a-better-way-to-mask-a-credit-card-number-in-python.478573/)
+5. [Stack over flow source needed to use concatenating](https://stackoverflow.com/questions/43524845/mask-a-portion-of-a-string-using-regexp)
 
-I used all above resources tirelessly. Initially, I only used Stack Overflow and simply found an example of code from someone else and went with that. However, that only worked if the string was known like 1234567891 and then xxxxxx7891 would be the output. Not dynamic. Changed when I learned to concatenate the stings. 
+I used all above resources tirelessly. Initially, I used a coding forum called Solve Forum and simply found an example of code from someone else and went with that - https://www.solveforum.com/forums/threads/solved-is-there-a-better-way-to-mask-a-credit-card-number-in-python.478573/. However, that only worked if the string was known like 1234567891 and then xxxxxx7891 would be the output. Not dynamic. Changed when I learned to concatenate the stings. I used this Stackoverflow example - https://stackoverflow.com/questions/43524845/mask-a-portion-of-a-string-using-regexp to learn how to dynamically mask an input and slice the end. Wouldn't have been able to finish this task the way i wanted without seeing somewhat similar example like that source. The other resources - specifically - geeksforgeeks on concatenation and slicing added to my understanding also. 
 
 So, overall, this code - using concatenation, masking and slicing - disguises the first 6 digits of a given input and only reveals the last 4
 
@@ -148,6 +179,11 @@ To run, go to the python terminal and type:
 ```sh
 python .\collatz.py and enter a positive integer as intructed. 
 ```
+
+## What is it and how can it be used
+The code is used to calculate and print the Collatz sequence for a given positive integer number entered by the user. The Collatz sequence is a sequence of numbers where, starting from any positive integer, if the number is even, divide it by 2, and if the number is odd, multiply it by 3 and add 1. The sequence will continue until it reaches 1.
+
+The practical use case of the Collatz sequence is mostly in the field of mathematics and computer science. It is often used to test algorithms and mathematical conjectures and is sometimes used as an example in introductory programming courses to teach basic control flow concepts such as loops and conditional statements - as evidenced by the simple fact that I am writing about the collatz having learned about it during a introductory programming module. The collatz has also been studied extensively in mathematics and has been the subject of many research papers and publications.
 
 ## Code + Explanation
 ```sh
@@ -188,6 +224,8 @@ Program performs collatz. Example - "Enter a positive integer number:"   10
 3. [W3Schools - If Statements](https://www.w3schools.com/python/gloss_python_if_statement.asp) - Used Andrew's lectures and labs but also this resource when educating myself on if statements.
 
 4. [W3Schools - Lists](https://www.w3schools.com/python/python_lists.asp) - Went back over lists again when i realised my initial problem didnt output the sequence in a list. This link showed me how to do it. 
+
+To start, i found the collatz formula on - https://stackoverflow.com/questions/33324432/collatz-sequence-python-3 and stuck with the bones of that. Then, i went back and realized I needed my output to look different than i initially had so used sequence = [] to achieve this. My previous source - https://stackoverflow.com/questions/33324432/collatz-sequence-python-3 also contained an example of how to output a list but it used list(collatz(user)) to convert the output of the collatz generator function into a list. I dont know anything about that and found sequence = [] easier to understand and implement. I also looked on - https://www.w3schools.com/python/python_lists.asp to learn more about lists but also seen how a couple of my fellow colleagues approched theirs. 
 
 So, overall this code performs the collatz using the above found formula, outputs the collatz sequence.append(num) into the new list. Used while loops and if statement to complete the collatz formula. Added safeguards in the event of a user inputting a negative integer number using another while loop. 
 
