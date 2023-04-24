@@ -1,5 +1,5 @@
-#This program sinply prints out hello world
+#This program simply prints out Hello world!
 #Author: Gerard Ball
-#Helloworld.py
+#Helloworld1.py
 
-print("Hello World!")
+print("Hello World!") #Prints 'Hello World!' to the terminal using python's print function. 

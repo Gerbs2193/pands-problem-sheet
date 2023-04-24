@@ -1,32 +1,13 @@
-#Author: Gerad Ball
-#program that creates a function that uses Newton's formula to approximate the square root of a number
-#week06squareroot.py
+#Author: Gerard Ball
+#Program that creates a function that uses the Babylonian method to approximate the square root of a number
+#squareroot6.py
 
-# defines a function 'my_sqrt' that takes argument of 'n'
-def my_sqrt(n):
-
-    #variable approx = half of 'n'. Babylonian approach to approximating a number is the square root of a number is always less than or equal to half said number. Starting point approx variable
-    approx = n/2
-
-    # calcuates new approximation of n. Average of approx and n/approx is now closer to to actual square root. This approximation is located in the variable 'closer'
-    closer = (approx +n/approx)/2
-
-    # while loop. Continues for as long as approximation closer is different from previous result
-    while closer != approx:
-
-        # inside while loop, the below lines update the vaules of approx and closer for as many iterations of loop until satisfactory result is returned. Initially, i did this only once and committed this to github. However, simply adding 3 successive iterations garners a very accurate square root. ex. 81 = 9.01 whereas before it was 45
-         
-        approx = closer
-        closer = (approx + n/approx)/2
-        approx = closer
-        closer = (approx + n/approx)/2
-        approx = closer
-        closer = (approx + n/approx)/2
-        approx = closer
-        closer = (approx + n/approx)/2
-
-        #exits loop and returns final square root calculation/approximation
-        return approx
-        
-n=int(input("Enter number: "))
-print ("Approximate square Root of Number: ", my_sqrt(n))
+def my_sqrt(n, tolerance=0.0001):                     #Defines my_sqrt function that takes in n square root and a tolerance of 0.0001(accuracy of approximation)
+    approx = n/2                                      #Initially, the variable approx is set at half of the input n
+    closer = (approx + n/approx)/2                    #Updates the approximation using the (approx + n/approx)/2 formula. 
+    while abs(closer - approx) > tolerance:           #While loop that continues until the difference between the current approximation closer and the previous approximation approx is less than or equal to the tolerance value. I used the abs function to calculate the absolute value of the difference between the two approximations
+        approx = closer                               #I update the previous approximation approx to be equal to the current approximation closer.
+        closer = (approx + n/approx)/2                #Again, an even closer approximation is got
+    return closer                                     #Finished iterating
+n = int(input("Enter number: "))                      #Prompts user to enter a number and stores it in the variable n
+print("Approximate square root of number:", my_sqrt(n)) #Calls my_sqrt function with the input n and prints the result as an approximation of the square root of n.
