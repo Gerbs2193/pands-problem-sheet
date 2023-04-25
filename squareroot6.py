@@ -9,5 +9,9 @@ def my_sqrt(n, tolerance=0.0001):                     #Defines my_sqrt function 
         approx = closer                               #I update the previous approximation approx to be equal to the current approximation closer.
         closer = (approx + n/approx)/2                #Again, an even closer approximation is got
     return closer                                     #Finished iterating
-n = int(input("Enter number: "))                      #Prompts user to enter a number and stores it in the variable n
-print("Approximate square root of number:", my_sqrt(n)) #Calls my_sqrt function with the input n and prints the result as an approximation of the square root of n.
+n = float(input("Enter a positive number: "))                   #Prompts user to enter a number and stores it as floating point number in the variable n
+while n <= 0:                                                   #Ensures number entered is positive otherwise error as <0 = negative
+    print("Invalid input. Please enter positive integer")
+    n = float(input("Enter a positive integer: "))
+print("Approximate square root of number:", my_sqrt(n))         #Calls my_sqrt function with the input n and prints the result as an approximation of the square root of n.
+
