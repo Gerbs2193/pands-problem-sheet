@@ -32,7 +32,8 @@ To run, navigate to the 'helloworld.py1' file and enter the following command in
 python .\helloworld1.py
 ```
 ## code
-```print("Hello World!)
+```sh 
+print("Hello World!)
 ```
 ## Output
 Program prints Hello World!
