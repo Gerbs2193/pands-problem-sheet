@@ -14,7 +14,7 @@ Here, I will go through and explain how I solved each weekly problem sheet task,
 - [leterfrequency7.py](#letterfrequency7.py)
 - [plottask8.py](#plottask8.py)
 - [Conclusion](#conclusion)
-- [READMESources](#readmeSources)
+- [READMEsources](#readmesources)
 - [Bibliography](#bibliography)
 - [License](#license)
 
@@ -504,7 +504,7 @@ python .\plottask8.py
 ## License <a name="license"></a>
 Unlicensed, free to use and distribute
 
-## READMESources <a name="readmeSources"></a>
+## READMEsources <a name="readmesources"></a>
 1. [Markdown Cheat sheet](https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md) - Used to get all the necessary Markdown correct. Essential for headings, code snippets using ```sh, hyperlink external websites, table of content. 
 
 2. [Markdown](https://www.markdownguide.org/getting-started) - Same as before
